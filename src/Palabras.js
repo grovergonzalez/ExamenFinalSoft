@@ -14,4 +14,19 @@ function separar_fraseEspacio(frase){
     return palabras;
 }
 
-export {get_frase, separar_fraseComa, separar_fraseEspacio};
+function CalcularVecesPalabra(frase)
+{
+    var Palabras = []
+    var contador = 0;
+    var Words = separar_fraseComa(frase);
+    for(let i=0; i<5;i++){
+        if(Words[i] == Words[i+1])
+        {
+            contador++;
+            Palabras = [contador];
+        }
+    }
+    return Palabras;
+}
+
+export {get_frase, separar_fraseComa, separar_fraseEspacio, CalcularVecesPalabra};
