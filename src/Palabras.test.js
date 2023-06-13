@@ -1,8 +1,10 @@
-import ContadorPalabras from "./Palabras";
+import {get_frase, separar_frase} from "./Palabras";
 
 describe("Calcular Palabras", () => {
-  const frase = new ContadorPalabras("Hola");
     it("Deberia retornar la frase que se esta utilizando", () => {
-      expect(frase.get_frase(frase)).toEqual("Hola");
+      expect(get_frase("Hola")).toEqual("Hola");
+    });
+    it("Deberia retornar la frase que se esta utilizando separada", () => {
+      expect(separar_frase("hola Que tal")).toEqual(["hola", "Que", "tal"]);
     });
 });
